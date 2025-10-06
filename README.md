@@ -1,3 +1,4 @@
+# Assignment 3
 ## Original Concept
 ```
 concept GroupExpenseTracking
@@ -60,7 +61,7 @@ The only change is an additional action: `suggestExpenseWithAI`.
 ```
 concept GroupExpenseTrackingAIAugmented
     purpose allows users to record and manage shared expenses within a group
-    principle after a group is created, users can add expenses to the group. each expense tracks the payer and the total cost, and how costs are divided between different users
+    principle After a group is created, users can add, edit, or delete expenses. Each expense tracks the payer, total cost, and how costs are divided among members. The AI assistant can interpret natural language prompts to suggest expenses, predict appropriate cost splits, and categorize expenses.
     state
         a set of Groups with
             a name String

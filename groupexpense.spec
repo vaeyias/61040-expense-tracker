@@ -38,8 +38,8 @@ concept GroupExpenseTrackingAIAugmented
             requires group and payer exist, payer is in group, totalCost > 0, all values in debtMapping are positive and sum to totalCost
             effect creates a GroupExpense with the given details and stores it in the group
 
-        suggestExpenseWithAI(payer:User, group:Group, prompt:String, currentDate:Date, llm: GeminiLLM):(expense:GroupExpense)
-            requires group and payer exists and payer is in group
+        suggestExpenseWithAI(user:User, group:Group, prompt:String, currentDate:Date, llm: GeminiLLM):(expense:GroupExpense)
+            requires group and user exists and user is in group
             effect takes the given prompt and returns a suggested expense with a predicted title, description, category, totalCost, date, cost split etc.
 
         editGroupExpense(payer:User, group:Group, oldExpense:GroupExpense, title:String, description:String, category:String, totalCost:Number, date:Date, debtMapping:Map<User:Number>): (newExpense:GroupExpense)
